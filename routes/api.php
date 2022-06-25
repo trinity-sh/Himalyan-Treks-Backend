@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookNow;
+use App\Http\Controllers\BookNowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('bookNow',[BookNow::class,"bookNow"]);
+Route::post('bookNow',[BookNowController::class,"bookNow"]);
