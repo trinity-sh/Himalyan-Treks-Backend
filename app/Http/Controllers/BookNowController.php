@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\BookNowForm;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
+use App\Models\BookNowForm;
 
 class BookNowController extends Controller
 {

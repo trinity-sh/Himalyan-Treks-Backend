@@ -6,12 +6,17 @@ use DB;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class BookNowModel extends Model
+class BookNowForm extends Model
 {
+    
+    public $table = "booknowforms";
     use HasFactory;
-    // public static function getuserData(){
-    //     $value=DB::table('booknowforms')->orderBy('id', 'asc')->get();
-    //     return $value;
-    //   }
+    protected $fillable = [
+        'name',
+        'email',
+        'message'
+    ];
+
+    public $timestamps=false;
 }
 
