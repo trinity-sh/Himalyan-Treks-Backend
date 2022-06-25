@@ -19,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post("booknow",[BookNow::class,"bookNow"]);
+Route::post('bookNow',[BookNow::class,"bookNow"]);
