@@ -28,3 +28,5 @@ Route::post('blogForm', [BlogController::class, "blogForm"]);
 
 // get apis
 Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
+Route::get("blogList", [BlogController::class, "blogList"]);
+Route::get("treksList", [TreksController::class, "treksList"]);

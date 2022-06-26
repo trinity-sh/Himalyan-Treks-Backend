@@ -18,4 +18,8 @@ class BlogController extends Controller
         return $blog;
         return "hello";
     }
+
+    function blogList(){
+        return BlogsForm::all();
+    }
 }

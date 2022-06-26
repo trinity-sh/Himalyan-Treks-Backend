@@ -40,4 +40,8 @@ class TreksController extends Controller
         $treks->save();
         return $treks;
     }
+
+    function treksList(){
+        return TreksForm::all();
+    }
 }
