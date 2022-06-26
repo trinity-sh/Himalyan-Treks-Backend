@@ -7,7 +7,7 @@ use App\Models\BookNowForm;
 
 class BookNowController extends Controller
 {
-    //
+    //post function
     function bookNow(Request $req){
         $book = new BookNowForm;
         $book->name= $req->input('name');
@@ -16,5 +16,10 @@ class BookNowController extends Controller
         $book->message= $req->input('message');
         $book->save();
         return $book;
+    }
+
+    // function to get the data
+    function bookNowList(){
+        return BookNowForm::all();
     }
 }
