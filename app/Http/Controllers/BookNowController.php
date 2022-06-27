@@ -13,6 +13,7 @@ class BookNowController extends Controller
         $book->name= $req->input('name');
         $book->email= $req->input('email');
         $book->mobile= $req->input('mobile');
+        $book->mobile= $req->input('no_of_people');
         $book->message= $req->input('message');
         $book->save();
         return $book;
