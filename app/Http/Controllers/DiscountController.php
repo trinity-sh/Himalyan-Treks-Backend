@@ -15,9 +15,9 @@ class DiscountController extends Controller
         $treks->days = $req->input('days');
         $treks->price = $req->input('price');
         // file input
-        $treks->img = $req->file('dis_banner')->store("treksImages");
+        $treks->img = $req->file('img')->store("treksImages");
         $treks->location = $req->input('location');
-        $treks->img_desp = $req->input('dis_banner_desp');
+        $treks->img_desp = $req->input('img_desp');
         $treks->camp_location = $req->input('camp_location');
         $treks->height = $req->input('height');
         $treks->desp = $req->input('desp');
