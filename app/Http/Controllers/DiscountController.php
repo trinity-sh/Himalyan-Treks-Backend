@@ -2,27 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DiscountForm;
 use Illuminate\Http\Request;
-use App\Models\TreksForm;
 
-class TreksController extends Controller
+class DiscountController extends Controller
 {
     //
-    function treksForm(Request $req)
+    function discountForm(Request $req)
     {
-        $treks = new TreksForm;
+        $treks = new DiscountForm;
         $treks->title = $req->input('title');
         $treks->days = $req->input('days');
         $treks->price = $req->input('price');
         // file input
-        $treks->img = $req->file('img')->store("treksImages");
-        $treks->img_desp = $req->input('img_desp');
+        $treks->dis_banner = $req->file('dis_banner')->store("treksImages");
         $treks->location = $req->input('location');
+        $treks->dis_banner_desp = $req->input('dis_banner_desp');
         $treks->camp_location = $req->input('camp_location');
         $treks->height = $req->input('height');
         $treks->desp = $req->input('desp');
         $treks->iternery = $req->input('iternery');
-        $treks->iternery_title = $req->input('iternery_title');
         $treks->iternery_desp = $req->input('iternery_desp');
         $treks->price_inclusion = $req->input('price_inclusion');
         $treks->price_exclusion = $req->input('price_exclusion');
@@ -32,10 +31,11 @@ class TreksController extends Controller
         $treks->gallery_img4 = $req->file('gallery_img4')->store("treksImages/gallery");
         $treks->gallery_img5 = $req->file('gallery_img5')->store("treksImages/gallery");
         $treks->gallery_img6 = $req->file('gallery_img6')->store("treksImages/gallery");
+        $treks->save();
         return $treks;
     }
 
-    function treksList(){
-        return TreksForm::all();
+    function discountList(){
+        return DiscountForm::all();
     }
 }
