@@ -8,12 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class BookNowForm extends Model
 {
-    
     public $table = "booknowforms";
     use HasFactory;
     protected $fillable = [
         'name',
         'email',
+        'no_of_people',
+        'mobile',
         'message'
     ];
 

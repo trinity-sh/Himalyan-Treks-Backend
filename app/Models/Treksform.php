@@ -9,7 +9,29 @@ class TreksForm extends Model
 {
    
     public $table = "treksforms";
+  
     use HasFactory;
-   
-    public $timestamps=false;
+    protected $fillable = [
+        'title',
+        'days',
+        'price',
+        'img',
+        'img_desp',
+        'location',
+        'camp_location',
+        'height',
+        'desp',
+        'iternery',
+        'iternery_desp',
+        'price_inclusion',
+        'price_exclusion',
+        'gallery_img1',
+        'gallery_img2',
+        'gallery_img3',
+        'gallery_img4',
+        'gallery_img5',
+        'gallery_img6',
+    
+    ];
+
 }

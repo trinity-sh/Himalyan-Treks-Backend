@@ -8,6 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class BlogsForm extends Model
 {
     public $table = "blogforms";
-    use HasFactory;
+    use  HasFactory;
+
+    protected $fillable = [
+        '_title',
+        'date',
+        'banner',
+        'desp'
+    ];
+
     public $timestamps=false;
 }
