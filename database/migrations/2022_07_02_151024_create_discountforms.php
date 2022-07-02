@@ -34,7 +34,6 @@ return new class extends Migration
             $table->string('gallery_img4');
             $table->string('gallery_img5');
             $table->string('gallery_img6');
-            $table->timestamps();
         });
     }
 

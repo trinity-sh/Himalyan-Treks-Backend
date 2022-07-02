@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('mobile');
             $table->string('no_of_people');
             $table->string('message');
-            $table->timestamps();
         });
     }
 
