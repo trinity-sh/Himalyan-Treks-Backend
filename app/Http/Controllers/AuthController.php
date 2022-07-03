@@ -45,7 +45,8 @@ class AuthController extends Controller
 
     public function user()
     {
-        return 'authonticated';
+        
+        return Auth::user();
     }
 
     public function logout()
