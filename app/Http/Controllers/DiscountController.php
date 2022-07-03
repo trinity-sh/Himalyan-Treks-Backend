@@ -23,8 +23,8 @@ class DiscountController extends Controller
         $treks->desp = $req->input('desp');
         $treks->iternery = $req->input('iternery');
         $treks->iternery_desp = $req->input('iternery_desp');
-        $treks->price_inclusion = $req->input('price_inclusion');
-        $treks->price_exclusion = $req->input('price_exclusion');
+        // $treks->price_inclusion = $req->input('price_inclusion');
+        // $treks->price_exclusion = $req->input('price_exclusion');
         $treks->gallery_img1 = $req->file('gallery_img1')->store("treksImages/gallery");
         $treks->gallery_img2 = $req->file('gallery_img2')->store("treksImages/gallery");
         $treks->gallery_img3 = $req->file('gallery_img3')->store("treksImages/gallery");

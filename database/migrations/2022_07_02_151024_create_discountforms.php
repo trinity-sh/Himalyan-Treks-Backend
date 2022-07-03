@@ -26,14 +26,14 @@ return new class extends Migration
             $table->string('desp');
             $table->string('iternery');
             $table->string('iternery_desp');
-            $table->string('price_inclusion');
-            $table->string('price_exclusion');
-            $table->string('gallery_img1');
-            $table->string('gallery_img2');
-            $table->string('gallery_img3');
-            $table->string('gallery_img4');
-            $table->string('gallery_img5');
-            $table->string('gallery_img6');
+            // $table->string('price_inclusion');
+            // $table->string('price_exclusion');
+            $table->string('gallery_img1')->nullable(true);
+            $table->string('gallery_img2')->nullable(true);
+            $table->string('gallery_img3')->nullable(true);
+            $table->string('gallery_img4')->nullable(true);
+            $table->string('gallery_img5')->nullable(true);
+            $table->string('gallery_img6')->nullable(true);
         });
     }
 

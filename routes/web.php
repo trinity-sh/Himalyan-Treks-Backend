@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('treksForm', [TreksController::class, "treksForm"]);
+// Route::get('insert','StudInsertController@insertform');
+// Route::post('create','StudInsertController@insert');

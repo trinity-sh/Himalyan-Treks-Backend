@@ -4,13 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens as SanctumHasApiTokens;
 
 class TreksForm extends Model
 {
    
-    public $table = "treksforms";
+    protected $table = "treksforms";
   
-    use HasFactory;
+    use  HasFactory, Notifiable, SanctumHasApiTokens;
     protected $fillable = [
         'title',
         'days',
@@ -23,8 +25,8 @@ class TreksForm extends Model
         'desp',
         'iternery',
         'iternery_desp',
-        'price_inclusion',
-        'price_exclusion',
+        // 'price_inclusion',
+        // 'price_exclusion',
         'gallery_img1',
         'gallery_img2',
         'gallery_img3',
