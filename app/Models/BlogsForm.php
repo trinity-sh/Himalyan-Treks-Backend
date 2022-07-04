@@ -11,7 +11,7 @@ class BlogsForm extends Model
     use  HasFactory;
 
     protected $fillable = [
-        '_title',
+        'title',
         'date',
         'banner',
         'desp'

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('blogforms', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('date');
+            $table->string('date')->nullable(true);
             $table->string('banner');
             $table->string('desp');
            

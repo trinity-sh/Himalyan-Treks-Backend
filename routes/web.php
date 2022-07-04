@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 Route::post('treksForm', [TreksController::class, "treksForm"]);
-// Route::get('insert','StudInsertController@insertform');
-// Route::post('create','StudInsertController@insert');
+Route::post('blogForm', [BlogController::class, "blogForm"]);
+Route::post('discountForm', [DiscountController::class, "discountForm"]);
+

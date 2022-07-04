@@ -10,13 +10,17 @@ class BlogController extends Controller
     //
     function blogForm(Request $req){
         $blog = new BlogsForm();
-        $blog->title= $req->input('title');
-        $blog->date= $req->input('date');
-        $blog->banner= $req->file('banner')->store("blogs");
-        $blog->desp= $req->input('desp');
-        $blog->save();
+        $title= $req->input('title');
+        $date= $req->input('date');
+        $banner= $req->file('banner')->store("blogs");
+        $desp= $req->input('desp');
+        
+        $blog = array(
+            'title' => $title, 'date' => $date, 'banner' => $banner, 'desp' => $desp
+        );
+        DB::table('blogforms')->insert($blog);
         return $blog;
-        return "hello";
+       
     }
 
     function blogList(){
