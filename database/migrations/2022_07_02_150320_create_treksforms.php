@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('height');
             $table->string('desp');
 
-            $table->string('iternery');
+            $table->string('iternery')->nullable(true);
             $table->string('iternery_day1')->nullable(true);
             $table->string('iternery_day1_desp')->nullable(true);
             $table->string('iternery_day2')->nullable(true);
