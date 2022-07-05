@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('date')->nullable(true);
             $table->string('banner');
-            $table->string('desp');
+            $table->string('desp', 10000);
            
         });
     }
