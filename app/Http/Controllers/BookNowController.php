@@ -27,4 +27,14 @@ class BookNowController extends Controller
     function bookNowList(){
         return BookNowForm::all();
     }
+    function bookingDelete($id)
+    {
+        $data = BookNowForm::where('id', $id)->delete();
+        if ($data) {
+            return ["result" => "product has been deleted"];
+        } else {
+            return ["result" => "operation failed"];
+        }
+    }
+    
 }

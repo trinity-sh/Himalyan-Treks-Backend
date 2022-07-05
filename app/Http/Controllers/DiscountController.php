@@ -73,4 +73,18 @@ class DiscountController extends Controller
     function discountList(){
         return DiscountForm::all();
     }
+
+    function discountDelete($id)
+    {
+        $data = DiscountForm::where('id', $id)->delete();
+        if ($data) {
+            return ["result" => "product has been deleted"];
+        } else {
+            return ["result" => "operation failed"];
+        }
+    }
+    function updateDiscount($id)
+    {
+        return DiscountForm::find($id);
+    }
 }

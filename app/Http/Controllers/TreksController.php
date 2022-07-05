@@ -75,4 +75,19 @@ class TreksController extends Controller
     {
         return TreksForm::all();
     }
+
+    function trekDelete($id)
+    {
+        $data = TreksForm::where('id', $id)->delete();
+        if ($data) {
+            return ["result" => "product has been deleted"];
+        } else {
+            return ["result" => "operation failed"];
+        }
+    }
+
+    function updateTreks($id)
+    {
+        return TreksForm::find($id);
+    }
 }
