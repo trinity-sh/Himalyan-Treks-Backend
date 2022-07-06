@@ -8,7 +8,7 @@ use DB;
 
 class TreksController extends Controller
 {
-    //
+    // 
     function treksForm(Request $req)
     {
         $treks = new TreksForm;

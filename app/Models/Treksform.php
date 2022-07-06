@@ -10,9 +10,9 @@ use Laravel\Sanctum\HasApiTokens as SanctumHasApiTokens;
 class TreksForm extends Model
 {
 
-    protected $table = "treksforms";
+    public $table = "treksforms";
 
-    use  HasFactory, Notifiable, SanctumHasApiTokens;
+    use  HasFactory;
     protected $fillable = [
         'title',
         'days',
@@ -32,4 +32,5 @@ class TreksForm extends Model
         'gallery_img6',
 
     ];
+    public $timestamps=false;
 }
