@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\BookNowForm;
+use DB;
 
 class BookNowController extends Controller
 {
