@@ -38,8 +38,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('user', [AuthController::class, "user"]);
     Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 
-    Route::post('treksForm', [TreksController::class, "treksForm"]);
-    Route::post('blogForm', [BlogController::class, "blogForm"]);
+    Route::post('treksForm', ["App\Http\Controllers\TreksController@treksForm"]);
+    Route::post('blogForm', ["App\Http\Controllers\BlogController@blogForm"]);
     Route::post('discountForm', [DiscountController::class, "discountForm"]);
     Route::post('logout', [AuthController::class, 'logout']);
 
