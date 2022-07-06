@@ -7,6 +7,7 @@ use App\Http\Controllers\BookNowController;
 use App\Http\Controllers\TreksController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DiscountController;
+use App\Http\Controllers\TrekFormController;
 use Laravel\Sanctum\Sanctum;
 
 /*
@@ -38,7 +39,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('user', [AuthController::class, "user"]);
     Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 
-    Route::post('treksForm', [TreksController::class, "treksForm"]);
+    Route::post('addTreks', [TrekFormController::class, "addTreks"]);
     Route::post('blogForm', [BlogController::class, "blogForm"]);
     Route::post('discountForm', [DiscountController::class, "discountForm"]);
     Route::post('logout', [AuthController::class, 'logout']);

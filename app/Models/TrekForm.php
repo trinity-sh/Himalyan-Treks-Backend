@@ -5,12 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TreksForm extends Model
+class TrekForm extends Model
 {
-
+    use HasFactory;
     public $table = "treksforms";
-
-    use  HasFactory;
     protected $fillable = [
         'title',
         'days',
