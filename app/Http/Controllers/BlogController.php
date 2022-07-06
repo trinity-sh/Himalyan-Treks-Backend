@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogsForm;
 use Illuminate\Http\Request;
+use DB;
 
 class BlogController extends Controller
 {
