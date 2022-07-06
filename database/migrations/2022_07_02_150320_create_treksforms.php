@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('desp', 10000);
 
             $table->string('iternery', 10000)->nullable(true);
+            
             // $table->string('iternery_day1')->nullable(true);
             // $table->string('iternery_day1_desp')->nullable(true);
             // $table->string('iternery_day2')->nullable(true);

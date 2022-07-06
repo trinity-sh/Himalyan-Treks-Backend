@@ -2,16 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TrekForm;
+use App\Models\DiscountForm;
 use Illuminate\Http\Request;
-use DB;
 
-class TrekFormController extends Controller
+class DiscountTreksController extends Controller
 {
-    //    public $table = "discountforms";
+    //
 
-    function addTreks(Request $req){
-        $trek = new TrekForm;
+    function discountForm(Request $req){
+        $trek = new DiscountForm;
         $title = $req->input('title');
         $days = $req->input('days');
         $price = $req->input('price');
@@ -37,14 +36,14 @@ class TrekFormController extends Controller
         return $trek;
     }
 
-    function treksList()
+    function discountList()
     {
-        return TrekForm::all();
+        return DiscountForm::all();
     }
 
-    function trekDelete($id)
+    function discountDelete($id)
     {
-        $data = TrekForm::where('id', $id)->delete();
+        $data = DiscountForm::where('id', $id)->delete();
         if ($data) {
             return ["result" => "product has been deleted"];
         } else {
@@ -52,8 +51,8 @@ class TrekFormController extends Controller
         }
     }
 
-    function updateTreks($id)
+    function updateDiscount($id)
     {
-        return TrekForm::find($id);
+        return DiscountForm::find($id);
     }
 }
