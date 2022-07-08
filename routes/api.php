@@ -34,8 +34,9 @@ Route::get("treksList", [TrekFormController::class, "treksList"]);
 Route::get('discountList', [DiscountTreksController::class, "discountList"]);
 
 // needs authontication
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('user', [AuthController::class, "user"]);
+Route::middleware('auth:sanctum')->group(function () {});
+
+Route::get('user', [AuthController::class, "user"]);
     Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 
     Route::post('addTreks', [TrekFormController::class, "addTreks"]);
@@ -51,4 +52,3 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('updateTreks/{id}', [TrekFormController::class, "updateTreks"]);
     Route::get('updateBlogs/{id}', [BlogController::class, "updateBlogs"]);
     Route::get('updateDiscount/{id}', [DiscountTreksController::class, "updateDiscount"]);
-});
