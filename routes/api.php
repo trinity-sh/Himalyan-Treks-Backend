@@ -38,12 +38,14 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::get('user', [AuthController::class, "user"]);
+Route::post('logout', [AuthController::class, 'logout']);
+
 Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 
 Route::post('addTreks', [TrekFormController::class, "addTreks"]);
 Route::post('blogForm', [BlogController::class, "blogForm"]);
 Route::post('discountForm', [DiscountTreksController::class, "discountForm"]);
-Route::post('logout', [AuthController::class, 'logout']);
+
 
 Route::delete('trekDelete/{id}', [TrekFormController::class, "trekDelete"]);
 Route::delete('blogDelete/{id}', [BlogController::class, "blogDelete"]);
@@ -51,8 +53,8 @@ Route::delete('discountDelete/{id}', [DiscountTreksController::class, "discountD
 Route::delete('bookingDelete/{id}', [BookNowController::class, "bookingDelete"]);
 
 Route::get('getTrek/{id}', [TrekFormController::class, "getTrek"]);
-Route::get('getDiscount/', [DiscountTreksController::class, "getDiscount"]);
-Route::get('getTrek/{id}', [TrekFormController::class, "getTrek"]);
+Route::get('getDiscount/{id}', [DiscountTreksController::class, "getDiscount"]);
+Route::get('getBlog/{id}', [BlogController::class, "getBlog"]);
 
 Route::put('updateBlog/{id}', [BlogController::class, "updateBlog"]);
 Route::put('updateDiscount/{id}', [DiscountTreksController::class, "updateDiscount"]);
