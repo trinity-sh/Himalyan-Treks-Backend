@@ -44,7 +44,7 @@ Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 
 Route::post('addTreks', [TrekFormController::class, "addTreks"]);
 Route::post('blogForm', [BlogController::class, "blogForm"]);
-Route::post('discountForm', [DiscountTreksController::class, "discountForm"]);
+Route::post('discountforms', [DiscountTreksController::class, "discountforms"]);
 
 
 Route::delete('trekDelete/{id}', [TrekFormController::class, "trekDelete"]);
