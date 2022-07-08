@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\DiscountForm;
 use Illuminate\Http\Request;
 
+use DB;
+
 class DiscountTreksController extends Controller
 {
     //
