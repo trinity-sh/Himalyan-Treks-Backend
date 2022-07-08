@@ -34,21 +34,26 @@ Route::get("treksList", [TrekFormController::class, "treksList"]);
 Route::get('discountList', [DiscountTreksController::class, "discountList"]);
 
 // needs authontication
-Route::middleware('auth:sanctum')->group(function () {});
+Route::middleware('auth:sanctum')->group(function () {
+});
 
 Route::get('user', [AuthController::class, "user"]);
-    Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
+Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 
-    Route::post('addTreks', [TrekFormController::class, "addTreks"]);
-    Route::post('blogForm', [BlogController::class, "blogForm"]);
-    Route::post('discountForm', [DiscountTreksController::class, "discountForm"]);
-    Route::post('logout', [AuthController::class, 'logout']);
+Route::post('addTreks', [TrekFormController::class, "addTreks"]);
+Route::post('blogForm', [BlogController::class, "blogForm"]);
+Route::post('discountForm', [DiscountTreksController::class, "discountForm"]);
+Route::post('logout', [AuthController::class, 'logout']);
 
-    Route::delete('trekDelete/{id}', [TrekFormController::class, "trekDelete"]);
-    Route::delete('blogDelete/{id}', [BlogController::class, "blogDelete"]);
-    Route::delete('discountDelete/{id}', [DiscountTreksController::class, "discountDelete"]);
-    Route::delete('bookingDelete/{id}', [BookNowController::class, "bookingDelete"]);
+Route::delete('trekDelete/{id}', [TrekFormController::class, "trekDelete"]);
+Route::delete('blogDelete/{id}', [BlogController::class, "blogDelete"]);
+Route::delete('discountDelete/{id}', [DiscountTreksController::class, "discountDelete"]);
+Route::delete('bookingDelete/{id}', [BookNowController::class, "bookingDelete"]);
 
-    Route::get('updateTreks/{id}', [TrekFormController::class, "updateTreks"]);
-    Route::get('updateBlogs/{id}', [BlogController::class, "updateBlogs"]);
-    Route::get('updateDiscount/{id}', [DiscountTreksController::class, "updateDiscount"]);
+Route::get('getTrek/{id}', [TrekFormController::class, "getTrek"]);
+Route::get('getDiscount/', [DiscountTreksController::class, "getDiscount"]);
+Route::get('getTrek/{id}', [TrekFormController::class, "getTrek"]);
+
+Route::put('updateBlog/{id}', [BlogController::class, "updateBlog"]);
+Route::put('updateDiscount/{id}', [DiscountTreksController::class, "updateDiscount"]);
+Route::put('updateTreks/{id}', [TrekFormController::class, "updateTreks"]);

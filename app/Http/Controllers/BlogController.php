@@ -14,7 +14,7 @@ class BlogController extends Controller
         $blog = new BlogsForm();
         $title = $req->input('title');
         $date = $req->input('date');
-        $banner = $req->file('banner')->store("blogs");
+        $banner = $req->input('banner');
         $desp = $req->input('desp');
 
         $blog = array(
@@ -38,8 +38,22 @@ class BlogController extends Controller
         }
     }
 
-    function updateBlogs($id)
-    {
+      
+    function getBlog($id){
         return BlogsForm::find($id);
+    }
+
+    function updateBlog($id, Request $req)
+    {
+        $blog = BlogsForm::find($id);
+        $blog->title = $req->input('title');
+        $blog->date = $req->input('date');
+        $blog->banner = $req->input('banner');
+        $blog->desp = $req->input('desp');
+            
+        $blog->save();
+        return $blog;
+
+
     }
 }
