@@ -21,8 +21,8 @@ class TrekFormController extends Controller
         $location = $req->input('location');
         $camp_location = $req->input('camp_location');
         $height = $req->input('height');
-        $desp = json_decode($req->all())->desp;
-        $iternery = json_decode($req->all())->iternery;
+        $desp = $req->input('desp');
+        $iternery = $req->input('iternery');
         $gallery_img1 = $req->input('gallery_img1');
         $gallery_img2 = $req->input('gallery_img2');
         $gallery_img3 = $req->input('gallery_img3');
