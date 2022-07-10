@@ -23,8 +23,8 @@ return new class extends Migration
             $table->string('location');
             $table->string('camp_location');
             $table->string('height');
-            $table->string('desp', 10000);
-            $table->string('iternery', 10000)->nullable(true);
+            $table->string('desp', 50000);
+            $table->string('iternery', 50000)->nullable(true);
             $table->string('gallery_img1', 1000)->nullable(true);
             $table->string('gallery_img2', 1000)->nullable(true);
             $table->string('gallery_img3', 1000)->nullable(true);
