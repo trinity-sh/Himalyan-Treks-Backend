@@ -11,7 +11,7 @@ class TrekFormController extends Controller
     //    public $table = "discountforms";
 
     function addTreks(Request $req){
-        $trek = new TrekForm();
+        $trek = new TrekForm;
         $title = $req->input('title');
         $days = $req->input('days');
         $price = $req->input('price');

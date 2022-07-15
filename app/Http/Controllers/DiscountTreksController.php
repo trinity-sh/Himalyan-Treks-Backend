@@ -12,7 +12,7 @@ class DiscountTreksController extends Controller
     //
 
     function discountForm(Request $req){
-        $trek = new DiscountForm();
+        $trek = new DiscountForm;
         $title = $req->input('title');
         $days = $req->input('days');
         $price = $req->input('price');

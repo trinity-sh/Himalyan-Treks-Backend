@@ -11,7 +11,7 @@ class BlogController extends Controller
     //
     function blogForm(Request $req)
     {
-        $blog = new BlogsForm();
+        $blog = new BlogsForm;
         $title = $req->input('title');
         $date = $req->input('date');
         $banner = $req->input('banner');
