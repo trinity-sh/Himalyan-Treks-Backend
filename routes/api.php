@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookNowController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CampController;
 use App\Http\Controllers\DiscountTreksController;
 use App\Http\Controllers\TrekFormController;
 use Laravel\Sanctum\Sanctum;
@@ -32,6 +33,7 @@ Route::post('bookNow', [BookNowController::class, "bookNow"]);
 Route::get("blogList", [BlogController::class, "blogList"]);
 Route::get("treksList", [TrekFormController::class, "treksList"]);
 Route::get('discountList', [DiscountTreksController::class, "discountList"]);
+Route::get('campingList', [CampController::class, "campingList"]);
 
 // needs authontication
 Route::middleware('auth:sanctum')->group(function () {
@@ -43,11 +45,13 @@ Route::post('logout', [AuthController::class, 'logout']);
 Route::get("bookNowList", [BookNowController::class, "bookNowList"]);
 
 Route::post('addTreks', [TrekFormController::class, "addTreks"]);
+Route::post('addCamping', [CampController::class, "addCamping"]);
 Route::post('blogForm', [BlogController::class, "blogForm"]);
 Route::post('discountForm', [DiscountTreksController::class, "discountForm"]);
 
 
 Route::delete('trekDelete/{id}', [TrekFormController::class, "trekDelete"]);
+Route::delete('campingDelete/{id}', [CampController::class, "campingDelete"]);
 Route::delete('blogDelete/{id}', [BlogController::class, "blogDelete"]);
 Route::delete('discountDelete/{id}', [DiscountTreksController::class, "discountDelete"]);
 Route::delete('bookingDelete/{id}', [BookNowController::class, "bookingDelete"]);
