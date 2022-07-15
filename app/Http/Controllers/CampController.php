@@ -11,7 +11,7 @@ class CampController extends Controller
 {
     //
     function addCamping(Request $req){
-        $trek = new CampForm;
+        $trek = new CampForm();
         $title = $req->input('title');
         $days = $req->input('days');
         $price = $req->input('price');

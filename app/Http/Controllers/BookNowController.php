@@ -10,7 +10,7 @@ class BookNowController extends Controller
 {
     //post function
     function bookNow(Request $req){
-        $book = new BookNowForm;
+        $book = new BookNowForm();
         $name= $req->input('name');
         $email= $req->input('email');
         $mobile= $req->input('mobile');
