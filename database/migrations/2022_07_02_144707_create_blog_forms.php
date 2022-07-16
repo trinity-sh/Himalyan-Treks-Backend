@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('date')->nullable(true);
-            $table->string('banner');
-            $table->string('desp', 10000);
+            $table->string('banner', 1000);
+            $table->string('desp', 50000);
            
         });
     }

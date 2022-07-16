@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('mobile');
             $table->string('no_of_people');
-            $table->string('message');
+            $table->string('message', 10000);
         });
     }
 
