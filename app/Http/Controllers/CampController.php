@@ -15,7 +15,6 @@ class CampController extends Controller
         $title = $req->input('title');
         $days = $req->input('days');
         $price = $req->input('price');
-        // file input
         $img = $req->input('img');
         $img_desp = $req->input('img_desp');
         $location = $req->input('location');
@@ -52,34 +51,31 @@ class CampController extends Controller
         }
     }
 
-    // function getTrek($id){
-    //     return CampForm::find($id);
-    // }
+    function getCamping($id){
+        return CampForm::find($id);
+    }
 
-    // function updateTreks($id, Request $req)
-    // {
-    //     $trek = CampForm::find($id);
-    //     $trek->title = $req->input('title');
-    //     $trek->days = $req->input('days');
-    //     $trek->price = $req->input('price');
-    //     // file input
-    //     $trek->img = $req->input('img');
-    //     $trek->img_desp = $req->input('img_desp');
-    //     $trek->location = $req->input('location');
-    //     $trek->camp_location = $req->input('camp_location');
-    //     $trek->height = $req->input('height');
-    //     $trek->desp = $req->input('desp');
-    //     $trek->iternery = $req->input('iternery');
-    //     $trek->gallery_img1 = $req->input('gallery_img1');
-    //     $trek->gallery_img2 = $req->input('gallery_img2');
-    //     $trek->gallery_img3 = $req->input('gallery_img3');
-    //     $trek->gallery_img4 = $req->input('gallery_img4');
-    //     $trek->gallery_img5 = $req->input('gallery_img5');
-    //     $trek->gallery_img6 = $req->input('gallery_img6');
-        
-    //     $trek->save();
-    //     return $trek;
-
-
-    // }
+    function updateCamping($id, Request $req)
+    {
+        $trek = CampForm::find($id);
+        $trek->title = $req->input('title');
+        $trek->days = $req->input('days');
+        $trek->price = $req->input('price');
+        $trek->img = $req->input('img');
+        $trek->img_desp = $req->input('img_desp');
+        $trek->location = $req->input('location');
+        $trek->camp_location = $req->input('camp_location');
+        $trek->height = $req->input('height');
+        $trek->desp = $req->input('desp');
+        $trek->iternery = $req->input('iternery');
+        $trek->gallery_img1 = $req->input('gallery_img1');
+        $trek->gallery_img2 = $req->input('gallery_img2');
+        $trek->gallery_img3 = $req->input('gallery_img3');
+        $trek->gallery_img4 = $req->input('gallery_img4');
+        $trek->gallery_img5 = $req->input('gallery_img5');
+        $trek->gallery_img6 = $req->input('gallery_img6');
+      
+        $trek->save();
+        return $trek;
+    }
 }
