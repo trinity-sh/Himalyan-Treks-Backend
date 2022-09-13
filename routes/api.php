@@ -59,7 +59,9 @@ Route::delete('bookingDelete/{id}', [BookNowController::class, "bookingDelete"])
 Route::get('getTrek/{id}', [TrekFormController::class, "getTrek"]);
 Route::get('getDiscount/{id}', [DiscountTreksController::class, "getDiscount"]);
 Route::get('getBlog/{id}', [BlogController::class, "getBlog"]);
+Route::get('getCamping/{id}', [CampController::class, "getCamping"]);
 
 Route::put('updateBlog/{id}', [BlogController::class, "updateBlog"]);
 Route::put('updateDiscount/{id}', [DiscountTreksController::class, "updateDiscount"]);
 Route::put('updateTreks/{id}', [TrekFormController::class, "updateTreks"]);
+Route::put('updateCamping/{id}', [CampController::class, "updateCamping"]);
